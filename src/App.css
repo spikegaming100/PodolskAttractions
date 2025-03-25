@@ -1,1 +1,13 @@
+.App {
+    width: 1440px;
+    height: 100vh;
+    outline: 1px solid #000;
+    display: flex;
+    margin: 0 auto;
+}
 
+@media (max-width: 1440px) {
+    .App {
+        width: 100%;
+    }
+}
