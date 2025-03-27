@@ -1,0 +1,37 @@
+.Header {
+    position: relative;
+    padding: 55px 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto 6fr auto;
+    column-gap: 66px;
+    align-items: center;
+    height: fit-content;
+}
+
+.HeaderRouting {
+    display: flex;
+    justify-content: space-between;
+}
+
+.HeaderLink {
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover {
+        text-shadow: 0.5px 0 0 var(--color-main);
+        transform: scale(1.02);
+    }
+}
+
+.HomeLink {
+    line-height: 0;
+    display: block;
+}
+
+.SocialsLinks {
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+}

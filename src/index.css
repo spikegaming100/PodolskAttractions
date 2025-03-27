@@ -1,11 +1,58 @@
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100 900;
+  src: url("/public/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat Alternates";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/public/fonts/MontserratAlternates-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat Alternates";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/public/fonts/MontserratAlternates-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat Alternates";
+  font-style: italic;
+  font-weight: 500;
+  src: url("/public/fonts/MontserratAlternates-MediumItalic.ttf") format("truetype");
+}
+
 * {
   scrollbar-width: thin;
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: var(--color-main);
+}
+
+body {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--color-white);
+
+  --color-main: #4B6587;
+  --color-sub: #F0E5CF;
+  --color-gray: #C8C6C6;
+  --color-white: #F7F6F2;
+
+  /*Property*/
+
+  --ContainerWidth: 1111px;
+
 }
+
+
 

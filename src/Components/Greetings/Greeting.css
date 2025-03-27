@@ -1,0 +1,36 @@
+.Greeting {
+    display: inline-block;
+    position: relative;
+    top: 116px;
+    left: -21px;
+}
+
+.GreetingHello {
+    text-transform: uppercase;
+    font: 180.98px "Montserrat Alternates";
+    font-weight: 400;
+}
+
+.GreetingSub {
+    float: right;
+    text-transform: uppercase;
+    font-size: 29.76px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 500;
+    position: relative;
+    top: -21px
+}
+
+.GreetingsBack {
+    position: absolute;
+    left: calc(50% - 88px);
+    transform: translateX(-50%);
+    top: -8px;
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 780.794px;
+    color: var(--color-gray);
+    opacity: 0.13;
+    user-select: none;
+}

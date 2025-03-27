@@ -1,0 +1,23 @@
+a .SvgTgBack, a .SvgWaBack {
+    ~ defs stop {
+        transition: 0.7s;
+    }
+}
+
+a .SvgTgBack {
+    fill: url('#gradient');
+}
+
+a .SvgWaBack {
+    fill: url('#gradientWa');
+}
+
+a:hover .SvgTgBack ~ defs stop:first-child,
+a:hover .SvgWaBack ~ defs stop:first-child {
+    stop-color: var(--color-sub);
+}
+
+a:hover .SvgTgBack ~ defs stop:last-child,
+a:hover .SvgWaBack ~ defs stop:last-child {
+    stop-color: var(--color-main);
+}

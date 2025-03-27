@@ -1,13 +1,36 @@
-.App {
+.Main {
     width: 1440px;
     height: 100vh;
     outline: 1px solid #000;
     display: flex;
+    flex-direction: column;
     margin: 0 auto;
 }
 
+.Wrapper {
+    margin: 0 auto;
+    width: var(--ContainerWidth);
+}
+
 @media (max-width: 1440px) {
-    .App {
-        width: 100%;
+    .Main {
+        width: calc(100% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    .Header {
+        margin: 0 10px !important;
+        column-gap: 10px !important;
+        padding: 24px 0 !important;
+    }
+    .HeaderRouting {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .SocialsLinks {
+        display: none !important;
     }
 }
