@@ -1,0 +1,33 @@
+.About {
+    height: var(--BlockHeight);
+    background: var(--color-main);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 61px;
+}
+
+.AboutContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 645px;
+    gap: 20px
+}
+
+.AboutText {
+    color: var(--color-white);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    font-variant: small-caps;
+}
+
+.AboutText2 {
+    color: var(--color-white);
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+    font-variant: small-caps;
+}
+

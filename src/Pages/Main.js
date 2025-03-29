@@ -1,15 +1,21 @@
 import React from "react";
 import Header from "../Components/Header/Header";
 import Greetings from "../Components/Greetings/Greetings"
+import About from "../Components/About/About";
+import Attractions from "../Components/Attractions/Attractions";
+import Feedback from "../Components/Feedback/Feedback";
 
 const Main = () => {
     return (
         <div className="Main">
-            <div className="Wrapper">
+            <div style={{position: "absolute", zIndex: 2}}>
                 <Header/>
-                <h1 className="GreetingsBack">1781</h1>
-                <Greetings/>
             </div>
+            <Greetings/>
+            <About/>
+            <Attractions/>
+            <Feedback/>
+            <Header/>
         </div>
     )
 }

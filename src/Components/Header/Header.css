@@ -1,5 +1,4 @@
 .Header {
-    position: relative;
     padding: 55px 0;
     display: grid;
     grid-auto-flow: column;
@@ -7,6 +6,7 @@
     column-gap: 66px;
     align-items: center;
     height: fit-content;
+    width: var(--ContainerWidth);
 }
 
 .HeaderRouting {
