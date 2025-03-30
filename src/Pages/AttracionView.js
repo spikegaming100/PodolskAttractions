@@ -2,11 +2,11 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import Header from "../Components/Header/Header";
 import places from "../Components/Places.json"
+import {SvgHeart} from "../Components/SvgIcon";
+import "./AttractionView.css"
 
 const AttractionView = () => {
     const { id } = useParams();
-
-    console.log(id)
 
     return (
         <div className="Container">
@@ -21,7 +21,7 @@ const AttractionView = () => {
                                 <p className="paragraph" key={index}>{paragraph}</p>
                             ))
                             : "undefined"}
-                        <img src={"/store/Heart.svg"} alt="heart" style={{position: "absolute", bottom: "0"}}/>
+                        <SvgHeart id={id} />
                     </div>
                 </div>
             </div>

@@ -1,0 +1,27 @@
+.AttractionView {
+    display: flex;
+    gap: 31px;
+    img {
+        line-height: 0;
+        display: block;
+    }
+    div {
+        width: 100%;
+        position: relative;
+        p {
+            font-family: 'Montserrat Alternates';
+            margin: 19px 0;
+            font-size: 19px;
+            font-weight: 500;
+            line-height: 30px;
+        }
+    }
+}
+
+.Heart {
+    width: 56px;
+    height: 49px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+}

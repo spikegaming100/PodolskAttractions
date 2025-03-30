@@ -1,0 +1,41 @@
+.MyPlaces {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 37px;
+    div {
+        text-align: center;
+        h1 {
+            text-transform: none;
+            font-size: 40px;
+            a {
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+.Travel {
+    display: flex;
+    font-size: 30px;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 120px;
+    width: 100%;
+}
+
+.StyledButton {
+    transition: 0.3s;
+    border: none;
+    font-family: "Montserrat";
+    font-size: inherit;
+    background: var(--color-main);
+    color: var(--color-white);
+    border-radius: 10px;
+    padding: 5px 44px;
+    text-transform: uppercase;
+    &:hover {
+        background: var(--color-main-hover);
+    }
+}

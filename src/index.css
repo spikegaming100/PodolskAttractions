@@ -44,6 +44,7 @@ body {
   background: var(--color-white);
 
   --color-main: #4B6587;
+  --color-main-hover: #3C506B;
   --color-sub: #F0E5CF;
   --color-gray: #C8C6C6;
   --color-white: #F7F6F2;

@@ -1,4 +1,6 @@
 import './SvgIcon.css'
+import {useEffect, useState} from "react";
+import Cookies from "js-cookie";
 
 export function SvgTelegram() {
     return (
@@ -33,3 +35,67 @@ export function SvgWhatsApp() {
     )
 }
 
+export function SvgHeart({ id }) {
+    const [hovered, setHovered] = useState(false);
+    const [active, setActive] = useState(false);
+
+    useEffect(() => {
+        const savedFavorites = Cookies.get("favorites");
+        if (savedFavorites) {
+            const favorites = JSON.parse(savedFavorites);
+            setActive(favorites.includes(id));
+        }
+    }, [id]);
+
+    const handleClick = () => {
+        let favorites = Cookies.get("favorites") ? JSON.parse(Cookies.get("favorites")) : [];
+
+        if (favorites.includes(id)) {
+            // Удаляем id из списка
+            favorites = favorites.filter(favId => favId !== id);
+            setActive(false);
+        } else {
+            // Добавляем id в список
+            favorites.push(id);
+            setActive(true);
+        }
+
+        if (favorites.length > 0) {
+            Cookies.set("favorites", JSON.stringify(favorites), { expires: 365 });
+        } else {
+            Cookies.remove("favorites"); // Удаляем куку, если список пуст
+        }
+    };
+
+    return (
+        <svg
+            width="74"
+            height="65"
+            viewBox="0 0 74 65"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="Heart"
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+            onClick={handleClick}
+            style={{ cursor: "pointer" }}
+        >
+            <path
+                className="empty"
+                d="M40.1056 10.3003L40.1057 10.3002C41.8104 8.00871 44.9204 5.17216 48.8838 3.63227L48.8838 3.63226C52.7135 2.14425 57.4075 1.82443 62.7537 4.51923L62.7538 4.51925C69.4248 7.88171 71.8805 13.563 71.4536 20.0188C71.0104 26.7181 67.3956 34.1879 61.747 39.8824L61.7469 39.8824C55.6419 46.0373 45.2162 56.5362 37.6953 62.302L37.6951 62.3021C37.3517 62.5655 36.8757 62.5805 36.4794 62.2582C29.505 56.583 18.164 45.8415 12.2529 39.8824L12.2529 39.8824C6.60418 34.1879 2.98943 26.7181 2.54643 20.0188L2.54643 20.0188C2.11949 13.563 4.57521 7.8817 11.246 4.51924L10.1207 2.2868L11.246 4.51923C16.5923 1.82443 21.2863 2.14425 25.116 3.63226L25.1161 3.63227C29.0794 5.17214 32.1895 8.00864 33.8945 10.3003C33.8945 10.3003 33.8946 10.3003 33.8946 10.3004L34.9943 11.7785L37.0001 14.4747L39.0059 11.7785L40.1056 10.3003Z"
+                stroke="#4B6587"
+                strokeWidth="5"
+            />
+            <path
+                className="filled"
+                d="M38.0998 8.80805C40.0343 6.20762 43.5035 3.04063 47.9784 1.30198C52.4066 -0.418567 57.8435 -0.755442 63.879 2.2868C71.568 6.16236 74.4318 12.8697 73.9481 20.1838C73.4585 27.5862 69.5169 35.5993 63.5219 41.643C57.4608 47.7535 46.902 58.3939 39.2164 64.286C37.9346 65.2689 36.1766 65.2348 34.9015 64.1973C27.8278 58.4413 16.4158 47.6291 10.478 41.643C4.48286 35.5993 0.541378 27.5862 0.0518752 20.1838C-0.431826 12.8697 2.432 6.16236 10.1207 2.2868C16.1563 -0.755442 21.5933 -0.418567 26.0215 1.30198C30.4964 3.04063 33.9656 6.20762 35.9003 8.80805L37.0001 10.2863L38.0998 8.80805Z"
+                fill="#4B6587"
+                style={{
+                    opacity: active || hovered ? 1 : 0,
+                    transition: "opacity 0.2s ease-in-out",
+                    pointerEvents: "none",
+                }}
+            />
+        </svg>
+    );
+}
