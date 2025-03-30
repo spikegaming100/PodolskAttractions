@@ -1,6 +1,6 @@
 .Attractions {
     height: 100%;
-    padding: 0 0 210px 0;
+    padding: 0 0 120px 0;
 }
 
 .Grid {
@@ -52,5 +52,5 @@
 }
 
 .CardDescrSub {
-
+    text-align: center;
 }

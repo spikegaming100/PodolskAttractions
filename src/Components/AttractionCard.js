@@ -1,7 +1,9 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
-const AttractionCard = ({ name, descr, photo }) => {
+const AttractionCard = ({ name, descr, photo, id }) => {
     return (
+        <Link to={`/attraction/${id}`}>
         <div className="CardContainer">
             <div
                 className="CardPhoto"
@@ -14,6 +16,7 @@ const AttractionCard = ({ name, descr, photo }) => {
                 <span className="CardDescrSub">{descr || ""}</span>
             </div>
         </div>
+        </Link>
     );
 };
 

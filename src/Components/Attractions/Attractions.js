@@ -11,10 +11,11 @@ const Attractions = () => {
                 <div className="Grid">
                     {places.map((place, index) => (
                         <AttractionCard
-                            key={index} // Уникальный ключ, можно заменить на уникальный идентификатор, если он есть
+                            key={index}
                             name={place.Name}
                             descr={place.Descr}
                             photo={place.Photo}
+                            id={place.id}
                         />
                     ))}
                 </div>

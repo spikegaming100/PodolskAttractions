@@ -12,6 +12,53 @@
     max-width: 502px;
 }
 
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.suggestion, .name {
+    height: 52px;
+    font-family: "Montserrat Alternates";
+    font-size: 20px;
+    border-radius: 0 100px 100px 0 ;
+    outline: none;
+    border: none;
+    opacity: 50%;
+    padding: 16px;
+    transition: 0.3s;
+    &:hover {
+        opacity: 100%;
+    }
+    &:focus-visible {
+        outline: none;
+        opacity: 100%;
+    }
+}
+
+.suggestion {
+    width: 448px;
+    margin: 55px 0 15px 0;
+}
+
+.name {
+    width: 350px;
+    margin-bottom: 63px;
+}
+
+.submit {
+    width: 248px;
+    height: 52px;
+    font-family: "Montserrat Alternates";
+    font-size: 20px;
+    border-radius: 0 100px 100px 0 ;
+    outline: none;
+    border: none;
+    padding: 16px;
+    transition: 0.3s;
+    text-align: start;
+}
+
 .ElizabethContainer {
     display: flex;
     flex-direction: column;
