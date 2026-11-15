@@ -1,4 +1,4 @@
-const {useState} = require("react");
+import React, {useState} from "react";
 
 function FeedbackForm() {
     const [buttonText, setButtonText] = useState("Отправить");

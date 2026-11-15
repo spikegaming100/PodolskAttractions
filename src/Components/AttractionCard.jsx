@@ -8,7 +8,7 @@ const AttractionCard = ({ name, descr, photo, id }) => {
             <div
                 className="CardPhoto"
                 style={{
-                    backgroundImage: `url('./store/attractions/preview/${photo}')`,
+                    backgroundImage: `url('/store/attractions/preview/${photo}')`,
                 }}
             />
             <div className="CardDescr">

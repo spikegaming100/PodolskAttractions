@@ -13,7 +13,7 @@ const Feedback = () => {
                 <FeedbackForm/>
             </div>
             <div className="ElizabethContainer">
-                <img src={"./store/Elizabeth2.png"} alt={"Elizabeth2"}/>
+                <img src={"/store/Elizabeth2.png"} alt={"Elizabeth2"}/>
                 <span className="Elizabeth">Подольск основан <span>5 октября 1781 года</span><br/> Указом императрицы Екатерины II *</span>
             </div>
         </div>
